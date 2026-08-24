@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    
+    {
+      "item": "smp_permits:vanilla_pod"
+    },
+    {"type": "neoforge:single",
+      "amount": 250,
+      "fluid": "createfood:milkshake"}
+  ],
+  "results": [
+    {
+      "amount": 500,
+      "id": "dndesires:vanilla_milkshake"
+    }
+  ]
+}

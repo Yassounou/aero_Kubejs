@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "createmetallurgy:graphite_molds"
+  },
+  "result": {
+    "count": 1,
+    "id": "kubejs:graphite_chunk_mold"
+  }
+}

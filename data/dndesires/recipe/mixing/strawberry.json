@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    
+    {
+      "item": "northstar:martian_strawberry"
+    },
+    {"type": "neoforge:single",
+      "amount": 250,
+      "fluid": "createfood:milkshake"}
+  ],
+  "results": [
+    {
+      "amount": 500,
+      "id": "dndesires:strawberry_milkshake"
+    }
+  ]
+}

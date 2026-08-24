@@ -1,0 +1,24 @@
+{
+  "type": "northstar:freezing",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+  {"type": "neoforge:single",
+      "amount": 250,
+      "fluid": "createfood:heavy_cream"},
+
+{"type": "neoforge:single",
+      "amount": 250,
+      "fluid": "createfood:condensed_milk"}
+  ],
+  "maxTemperature": -15,
+  "minTemperature": -25,
+  "processing_time": 100,
+  "results": [
+    {
+      "amount": 250,
+      "id": "ratatouille_fried_delights:ice_cream_base"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {"type": "neoforge:single",
+      "amount": 250,
+      "fluid": "createfood:milkshake"}
+  ],
+  "results": [
+    {
+      "amount": 500,
+      "id": "dndesires:glowberry_milkshake"
+    }
+  ]
+}

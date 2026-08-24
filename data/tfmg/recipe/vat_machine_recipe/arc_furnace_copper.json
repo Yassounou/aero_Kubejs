@@ -1,0 +1,32 @@
+{
+  "type": "tfmg:vat_machine_recipe",
+  "allowed_vat_types": [
+    "tfmg:firebrick_lined_vat"
+  ],
+  "ingredients": [
+    {
+      "item": "createmetallurgy:copper_dust"
+    },
+    
+    {
+      "item": "tfmg:coal_coke_dust"
+    }
+  ],
+  "machines": [
+    "tfmg:graphite_electrode",
+    "tfmg:graphite_electrode",
+    "tfmg:graphite_electrode"
+  ],
+  "min_size": 9,
+  "processing_time": 20,
+  "results": [
+    {
+      "chance": 0.9,
+      "id": "tfmg:coal_coke_dust"
+    },
+    {
+      "count": 3,
+      "id": "minecraft:copper_ingot"
+    }
+  ]
+}
