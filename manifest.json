@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "revision": "8f6449cbfb7d8fa85d9e81b116981933bf8e1df3",
   "files": {
     "assets/kubejs/textures/block/example_block.png": "783d78bd1ee61d3b32273670dff9d82c34cd74c5ae899a10f104f473828d5bbc",
