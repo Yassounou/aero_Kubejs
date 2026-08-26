@@ -12,8 +12,8 @@ ServerEvents.recipes(event => {
     // Forcefully remove ANY crushing recipe resulting in these items
     event.remove({ type: 'create:splashing', output: 'minecraft:iron_nugget' })
     event.remove({ type: 'create:splashing', output: 'minecraft:gold_nugget' })
-    event.remove({ type: 'create:splashing', output: 'minecraft:zinc_nugget' })
-    event.remove({ type: 'create:splashing', output: 'minecraft:copper_nugget' })
+    event.remove({ type: 'create:splashing', output: 'create:zinc_nugget' })
+    event.remove({ type: 'create:splashing', output: 'create:copper_nugget' })
 })
 
 
@@ -91,6 +91,10 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'createmetallurgy:casting_in_table/brass/rod' })
     event.remove({ id: 'createmetallurgy:casting_in_table/steel/plate' })
 
+
+
+
+
     // alloyin
 
     event.remove({ id: 'createmetallurgy:alloying/steel' })
@@ -112,7 +116,8 @@ ServerEvents.recipes(event => {
 
     event.remove({ id: 'createdeliveryrequired:market' })
     event.remove({ id: 'createthrusters:physics_staff' })
-
+    event.remove({ id: 'dndesires:seething/diamond_shard_from_deepslate_coal_ore' })
+    event.remove({ id: 'dndesires:seething/diamond_shard_from_coal_block' })
 
     // ice cream
 
@@ -125,8 +130,21 @@ ServerEvents.recipes(event => {
     event.remove({ output: 'createfood:heavy_cream_bucket' })
     event.remove({ id: 'createfood:create/mixing/condensed_milk_from_mixing_heated_milk_alt' })
     event.remove({ id: 'createfood:create/mixing/condensed_milk_from_mixing_heated_milk' })
-    
-    
+    event.remove({ id: 'createfood:farmersdelight/cooking/bar_of_chocolate_from_cooking' })
+    event.remove({ id: 'create:compacting/chocolate' })
+    event.remove({ id: 'createdieselgenerators:casting/chocolate_bar' })
+    event.remove({ id: 'sliceanddice:cooking/createfood/farmersdelight/bar_of_chocolate_from_cooking_1' })
+    event.remove({ id: 'sliceanddice:cooking/createfood/farmersdelight/bar_of_chocolate_from_cooking_0' })
+    event.remove({ id: 'create:mixing/chocolate_melting' })
+    event.remove({ id: 'create:mixing/chocolate_fluid_from_mixing_melting' })
+    event.remove({ id: 'createfood:create/mixing/chocolate_fluid_from_mixing' })
+    event.remove({ id: 'createfood:create/mixing/chocolate_fluid_from_mixing_melting' })
+    event.remove({ id: 'createfood:create/mixing/chocolate_fluid_from_mixing_melting_alt' })
+    event.remove({ id: 'createfood:create/emptying/chocolate_fluid_from_emptying_bottle' })
+    event.remove({ id: 'create:mixing/chocolate' })
+    event.remove({ id: 'createfood:create/mixing/chocolate_fluid_from_mixing_alt' })
+
+// milk powder
 
     event.remove({ output: 'createfood:milk_powder' })
 
