@@ -118,6 +118,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'createthrusters:physics_staff' })
     event.remove({ id: 'dndesires:seething/diamond_shard_from_deepslate_coal_ore' })
     event.remove({ id: 'dndesires:seething/diamond_shard_from_coal_block' })
+    event.remove({ id: 'createdeliveryrequired:contractor' })
 
     // ice cream
 
