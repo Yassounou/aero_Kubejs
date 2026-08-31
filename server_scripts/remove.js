@@ -144,7 +144,9 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'createfood:create/emptying/chocolate_fluid_from_emptying_bottle' })
     event.remove({ id: 'create:mixing/chocolate' })
     event.remove({ id: 'createfood:create/mixing/chocolate_fluid_from_mixing_alt' })
+    event.remove({ id: 'createfood:create/milling/paprika_from_milling' })
 
+    
 // milk powder
 
     event.remove({ output: 'createfood:milk_powder' })
@@ -214,6 +216,8 @@ ServerEvents.recipes(event => {
             }
         ]
     })
+
+    
 })
 
 
@@ -224,4 +228,10 @@ ServerEvents.recipes(event => {
     
 
     
-
+BlockEvents.drops(event => {
+    // Vérifie si le bloc brisé est bien le track_mount
+    if (event.block.id === 'tracks:track_mount') {
+        // Ajoute l'item correspondant dans les loots de destruction
+        event.addDrop('tracks:track_mount')
+    }
+})
