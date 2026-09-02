@@ -113,4 +113,32 @@ event.recipes.createSequencedAssembly([
     .transitionalItem(baseItem) 
     .loops(3) // Répète la séquence complète 3 fois
 
+
+
+    // Optional: Remove the default recipe for sturdy sheets if you want this to be the only way to craft it
+    event.remove({ output: 'create:sturdy_sheet' })
+
+    event.recipes.create.sequenced_assembly(
+        [
+            // Main output (JEI displays this result)
+            'create:sturdy_sheet'
+            
+            // Optional: You can add salvage/scrap items here if the process fails, like this:
+            // Item.of('minecraft:obsidian').withChance(0.2) 
+        ], 
+        // The initial base item that you place on the depot/belt
+        'create:obsidian_powder', 
+        [
+            // The step sequence: Pressing the item
+            // The first argument is the output of the sub-step, the second is the input
+            event.recipes.create.pressing('create:incomplete_sturdy_sheet', 'create:incomplete_sturdy_sheet')
+        ]
+    )
+    .transitionalItem('create:incomplete_sturdy_sheet') // Intermediate item used during the process
+    .loops(3) // Instructs the assembly line to repeat the step sequence exactly 3 times
 })
+
+
+
+    
+

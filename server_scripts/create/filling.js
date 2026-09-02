@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.create.filling('minecraft:tuff', [
         'minecraft:cobblestone',
-        Fluid.of('tfmg:molten_slag', 100)
+        Fluid.of('tfmg:molten_slag', 10)
     ])
 })
 
