@@ -145,6 +145,8 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'create:mixing/chocolate' })
     event.remove({ id: 'createfood:create/mixing/chocolate_fluid_from_mixing_alt' })
     event.remove({ id: 'createfood:create/milling/paprika_from_milling' })
+    event.remove({ id: 'create:sequenced_assembly/sturdy_sheet' })
+
 
     
 // milk powder

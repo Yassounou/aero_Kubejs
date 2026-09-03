@@ -1,9 +1,11 @@
 ServerEvents.recipes(event => {
     const baseItem = 'create:cardboard'
+    const baseItem2 = 'create:powdered_obsidian'
     const outputItem = 'aeronuts_cards:iron_booster'
     const outputItem2 = 'aeronuts_cards:gold_booster'
     const outputItem3 = 'aeronuts_cards:diamond_booster'
     const outputItem4 = 'aeronuts_cards:netherite_booster'
+    const outputItem5 = 'create:sturdy_sheet'
 
     event.recipes.createSequencedAssembly([
         // 
@@ -113,30 +115,35 @@ event.recipes.createSequencedAssembly([
     .transitionalItem(baseItem) 
     .loops(3) // Répète la séquence complète 3 fois
 
+ 
+    //STURDY SHEET
+
+   
+   event.recipes.createSequencedAssembly([
+      
+   
 
 
-    // Optional: Remove the default recipe for sturdy sheets if you want this to be the only way to craft it
-    event.remove({ output: 'create:sturdy_sheet' })
+        { id: outputItem5, chance: 0.9 },
+        { id: 'minecraft:obsidian', chance: 0.1 }
+    ], baseItem2, [
+        
+        
+        // Presser avec la presse mécanique
+        event.recipes.createPressing(baseItem, baseItem),
+        event.recipes.createPressing(baseItem, baseItem),
+        event.recipes.createPressing(baseItem, baseItem)
+        
+    ])
+    .transitionalItem(baseItem) 
+    .loops(3) // Répète la séquence complète 3 fois
 
-    event.recipes.create.sequenced_assembly(
-        [
-            // Main output (JEI displays this result)
-            'create:sturdy_sheet'
-            
-            // Optional: You can add salvage/scrap items here if the process fails, like this:
-            // Item.of('minecraft:obsidian').withChance(0.2) 
-        ], 
-        // The initial base item that you place on the depot/belt
-        'create:obsidian_powder', 
-        [
-            // The step sequence: Pressing the item
-            // The first argument is the output of the sub-step, the second is the input
-            event.recipes.create.pressing('create:incomplete_sturdy_sheet', 'create:incomplete_sturdy_sheet')
-        ]
-    )
-    .transitionalItem('create:incomplete_sturdy_sheet') // Intermediate item used during the process
-    .loops(3) // Instructs the assembly line to repeat the step sequence exactly 3 times
+
+
+    
 })
+
+
 
 
 
