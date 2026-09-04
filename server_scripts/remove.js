@@ -224,16 +224,35 @@ ServerEvents.recipes(event => {
 
 
 
+ServerEvents.recipes(event => {
+    // 1. Supprime la recette d'origine pour obtenir la tête de squelette
+    event.remove({ output: 'minecraft:skeleton_skull' })
 
- 
+    // 2. Déclaration de l'item de transition
+    const transitionalItem = 'createnetherindustry:incomplete_skeleton_skull'
 
-    
-
-    
-BlockEvents.drops(event => {
-    // Vérifie si le bloc brisé est bien le track_mount
-    if (event.block.id === 'tracks:track_mount') {
-        // Ajoute l'item correspondant dans les loots de destruction
-        event.addDrop('tracks:track_mount')
-    }
+    // 3. Syntaxe chaînée officielle 1.21.1 avec CreateItem.of
+    event.recipes.create.sequenced_assembly([
+        CreateItem.of('minecraft:skeleton_skull', 0.85),
+        CreateItem.of('minecraft:bone', 0.15),
+        
+    ], 'minecraft:bone', [
+        // Étape 1 : Déployer un Bone Block
+        event.recipes.create.deploying(transitionalItem, [transitionalItem, 'minecraft:bone_block']),
+        
+        // Étape 2 : Déployer la Calcium Rich Powder
+        event.recipes.create.deploying(transitionalItem, [transitionalItem, 'create_aquatic_ambitions:calcium_rich_powder']),
+        
+        // Étape 3 : Déployer de la Bone Meal
+        event.recipes.create.deploying(transitionalItem, [transitionalItem, 'minecraft:bone_meal'])
+    ]).transitionalItem(transitionalItem).loops(3)
 })
+
+
+
+
+    
+
+    
+
+

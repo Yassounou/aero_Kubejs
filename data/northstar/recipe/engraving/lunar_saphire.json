@@ -1,0 +1,14 @@
+{
+  "type": "northstar:engraving",
+  "ingredients": [
+    {
+      "item": "minecraft:amethyst_shard"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "id": "northstar:lunar_sapphire_shard"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "type": "tfmg:vat_machine_recipe",
+  "allowed_vat_types": [
+    "tfmg:steel_vat",
+    "tfmg:firebrick_lined_vat"
+  ],
+  "heat_requirement": "superheated",
+  "ingredients": [
+    {
+      
+      "item": "northstar:polished_lunar_sapphire"
+    }
+  ],
+  "machines": [
+    "tfmg:graphite_electrode",
+    "tfmg:graphite_electrode",
+    "tfmg:graphite_electrode"
+  ],
+  "min_size": 9,
+"processing_time": 20,
+  "results": [
+{
+      "chance": 0.1,
+      "id": "northstar:polished_lunar_sapphire"
+    },
+    {
+      "amount": 500,
+      "id": "create_enchantment_industry:experience"
+    }
+  ]
+}
